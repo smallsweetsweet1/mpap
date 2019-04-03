@@ -1,0 +1,42 @@
+<template name="05a85836">
+  <view class="_div data-v-338eff00">
+    <i-tabs current="{{current_scroll}}" scroll bindchange="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-tabs data-v-338eff00">
+      <i-tab key="tab1" title="选项1" class="_i-tab data-v-338eff00"></i-tab>
+      <i-tab key="tab2" title="选项2" class="_i-tab data-v-338eff00"></i-tab>
+      <i-tab key="tab3" title="选项3" class="_i-tab data-v-338eff00"></i-tab>
+      <i-tab key="tab4" title="选项4" class="_i-tab data-v-338eff00"></i-tab>
+      <i-tab key="tab5" title="选项5" class="_i-tab data-v-338eff00"></i-tab>
+      <i-tab key="tab6" title="选项6" class="_i-tab data-v-338eff00"></i-tab>
+      <i-tab key="tab7" title="选项7" class="_i-tab data-v-338eff00"></i-tab>
+      <i-tab key="tab8" title="选项8" class="_i-tab data-v-338eff00"></i-tab>
+      <i-tab key="tab9" title="选项9" class="_i-tab data-v-338eff00"></i-tab>
+    </i-tabs>
+    <view class="_view data-v-338eff00 top-padding">
+      <i-card title="良品铺子" extra="零食" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg" class="_i-card data-v-338eff00">
+        <view slot="content" class="_view data-v-338eff00">好多不错的零食</view>
+        <view slot="footer" class="_view data-v-338eff00">后街1-22</view>
+      </i-card>
+      <view class="_view data-v-338eff00 top-padding"></view>
+      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg" class="_i-card data-v-338eff00">
+        <view slot="content" class="_view data-v-338eff00">内容不错</view>
+        <view slot="footer" class="_view data-v-338eff00">尾部内容</view>
+      </i-card>
+      <view class="_view data-v-338eff00 top-padding"></view>
+      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg" class="_i-card data-v-338eff00">
+        <view slot="content" class="_view data-v-338eff00">内容不错</view>
+        <view slot="footer" class="_view data-v-338eff00">尾部内容</view>
+      </i-card>
+      <view class="_view data-v-338eff00 top-padding"></view>
+      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg" class="_i-card data-v-338eff00">
+        <view slot="content" class="_view data-v-338eff00">内容不错</view>
+        <view slot="footer" class="_view data-v-338eff00">尾部内容</view>
+      </i-card>
+      <view class="_view data-v-338eff00 top-padding"></view>
+      <i-card title="卡片标题" i-class="top-padding" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg" class="_i-card data-v-338eff00">
+        <view slot="content" class="_view data-v-338eff00">内容不错</view>
+        <view slot="footer" class="_view data-v-338eff00">尾部内容</view>
+      </i-card>
+      <view class="_view data-v-338eff00 top-padding"></view>
+    </view>
+  </view>
+</template>

@@ -1,8 +1,13 @@
 <template>
   <div @click="clickHandle">
     <i-notice-bar icon="systemprompt" loop>
-    啦啦啦啦
+    {{notice}}啦啦啦啦
     </i-notice-bar>
+    <i-grid i-class="no-border">
+    <i-grid-item v-for="item in grids" :key="item" i-class="no-border">
+    <i-grid-label>{{item}}</i-grid-label>
+    </i-grid-item>
+    </i-grid>
     <i-grid i-class="no-border">
     <i-grid-item i-class="no-border">
         <i-grid-icon>
@@ -40,11 +45,8 @@ import card from '@/components/card'
 export default {
   data () {
     return {
-      motto: 'Hello miniprograme',
-      userInfo: {
-        nickName: 'mpvue',
-        avatarUrl: 'http://mpvue.com/assets/logo.png'
-      }
+      notice: '2019.04.03',
+      grids: ['a', 'b']
     }
   },
 

@@ -1,0 +1,16 @@
+<template name="9b820abe">
+  <view class="_div data-v-3fb4bd2a">
+    <view class="_view data-v-3fb4bd2a userinfo">
+      <view class="_view data-v-3fb4bd2a userinfo-avatar">
+        <open-data type="userAvatarUrl" class="_open-data data-v-3fb4bd2a"></open-data>
+      </view>
+      <open-data type="userNickName" class="_open-data data-v-3fb4bd2a"></open-data>
+    </view>
+    <i-cell-group class="_i-cell-group data-v-3fb4bd2a">
+      <i-cell title="我的收藏" is-link url="/pages/logs/main" class="_i-cell data-v-3fb4bd2a"></i-cell>
+      <i-cell title="接收通知" class="_i-cell data-v-3fb4bd2a">
+        <switch slot="footer" checked class="_switch data-v-3fb4bd2a" />
+      </i-cell>
+    </i-cell-group>
+  </view>
+</template>
