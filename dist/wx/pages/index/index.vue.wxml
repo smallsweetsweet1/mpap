@@ -1,6 +1,6 @@
 <template name="0070e940">
   <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_div data-v-6bff7160">
-    <i-notice-bar icon="systemprompt" loop class="_i-notice-bar data-v-6bff7160">
+    <i-notice-bar wx:if="{{show}}" icon="systemprompt" loop class="_i-notice-bar data-v-6bff7160">
       {{notice}}啦啦啦啦 </i-notice-bar>
     <i-grid i-class="no-border" class="_i-grid data-v-6bff7160">
       <i-grid-item wx:key="item" key="{{item}}" i-class="no-border" wx:for="{{grids}}" wx:for-index="index" wx:for-item="item" class="_i-grid-item data-v-6bff7160">

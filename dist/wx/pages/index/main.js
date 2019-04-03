@@ -143,7 +143,8 @@ if (false) {(function () {
   data: function data() {
     return {
       notice: '2019.04.03',
-      grids: ['a', 'b']
+      grids: ['a', 'b'],
+      show: true
     };
   },
 
@@ -188,13 +189,13 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     on: {
       "click": _vm.clickHandle
     }
-  }, [_c('i-notice-bar', {
+  }, [(_vm.show) ? _c('i-notice-bar', {
     attrs: {
       "icon": "systemprompt",
       "loop": "",
       "mpcomid": '0'
     }
-  }, [_vm._v("\n    " + _vm._s(_vm.notice) + "啦啦啦啦\n    ")]), _vm._v(" "), _c('i-grid', {
+  }, [_vm._v("\n    " + _vm._s(_vm.notice) + "啦啦啦啦\n    ")]) : _vm._e(), _vm._v(" "), _c('i-grid', {
     attrs: {
       "i-class": "no-border",
       "mpcomid": '3'

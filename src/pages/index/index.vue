@@ -1,6 +1,6 @@
 <template>
   <div @click="clickHandle">
-    <i-notice-bar icon="systemprompt" loop>
+    <i-notice-bar v-if='show' icon="systemprompt" loop>
     {{notice}}啦啦啦啦
     </i-notice-bar>
     <i-grid i-class="no-border">
@@ -46,7 +46,8 @@ export default {
   data () {
     return {
       notice: '2019.04.03',
-      grids: ['a', 'b']
+      grids: ['a', 'b'],
+      show: true
     }
   },
 
