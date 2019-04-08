@@ -29,7 +29,7 @@
     </i-grid-item>
 </i-grid>
     <i-panel title="推荐">
-      <view class="top-padding">
+      <view v-for="item in data" key='item' class="top-padding">
       <i-card title="" extra="" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
         <view slot="content"></view>
         <view slot="footer"></view>
@@ -71,7 +71,13 @@ export default {
   },
 
   created () {
-    // let app = getApp()
+    const db = wx.cloud.database({ env: 'data-1' })
+    db.collection('data').get().then(
+      res => {
+        console.log(res)
+        this.datas = res.data
+      }
+    )
   }
 }
 </script>
