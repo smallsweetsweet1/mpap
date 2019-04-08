@@ -29,12 +29,16 @@
     </i-grid-item>
 </i-grid>
     <i-panel title="推荐">
-      <view v-for="item in data" key='item' class="top-padding">
-      <i-card title="" extra="" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-        <view slot="content"></view>
-        <view slot="footer"></view>
+      <view class="top-padding">
+
+      <view v-for="item in datas" :key='item' class="top-padding">
+      <i-card title="d" extra="d" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">d</view>
+        <view slot="footer">d</view>
       </i-card>
     </view>
+
+      </view>
     </i-panel>
   </div>
 </template>
@@ -71,10 +75,10 @@ export default {
   },
 
   created () {
-    const db = wx.cloud.database({ env: 'data-1' })
-    db.collection('data').get().then(
+    const db = wx.cloud.database({ env: 'got-1b' })
+    db.collection('got-fg3e3').get().then(
       res => {
-        console.log(res)
+        console.log(res.data)
         this.datas = res.data
       }
     )

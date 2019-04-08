@@ -1,4 +1,4 @@
-<template name="24f1df38">
+<template name="b583a236">
   <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_div data-v-6bff7160">
     <i-notice-bar wx:if="{{show}}" icon="systemprompt" loop class="_i-notice-bar data-v-6bff7160">
       {{notice}}啦啦啦啦 </i-notice-bar>
@@ -28,11 +28,13 @@
       </i-grid-item>
     </i-grid>
     <i-panel title="推荐" class="_i-panel data-v-6bff7160">
-      <view key="item" class="_view data-v-6bff7160 top-padding" wx:for="{{data}}" wx:for-index="index" wx:key="" item"" wx:for-item="item">
-        <i-card title extra thumb="https://i.loli.net/2017/08/21/599a521472424.jpg" class="_i-card data-v-6bff7160">
-          <view slot="content" class="_view data-v-6bff7160"></view>
-          <view slot="footer" class="_view data-v-6bff7160"></view>
-        </i-card>
+      <view class="_view data-v-6bff7160 top-padding">
+        <view wx:key="item" key="{{item}}" class="_view data-v-6bff7160 top-padding" wx:for="{{datas}}" wx:for-index="index" wx:for-item="item">
+          <i-card title="d" extra="d" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg" class="_i-card data-v-6bff7160">
+            <view slot="content" class="_view data-v-6bff7160">d</view>
+            <view slot="footer" class="_view data-v-6bff7160">d</view>
+          </i-card>
+        </view>
       </view>
     </i-panel>
   </view>
