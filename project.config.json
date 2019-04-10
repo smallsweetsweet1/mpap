@@ -5,13 +5,15 @@
 		"es6": false,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
 	"appid": "wxbd120a794340d10f",
 	"projectname": "my-project",
-	"libVersion": "2.6.4",
+	"cloudfunctionRoot": "/functions/",
+	"libVersion": "2.6.5",
 	"condition": {
 		"search": {
 			"current": -1,
