@@ -177,8 +177,8 @@ if (false) {(function () {
 
     var db = wx.cloud.database({ env: 'got-1b' });
     db.collection('got-fg3e3').get().then(function (res) {
-      console.log(res);
-      _this.a = res;
+      console.log(res.data);
+      _this.a = res.data;
     });
     /* wx.cloud.callFunction({ name: 'me' }).then(
       res => { console.log(res) }
@@ -288,20 +288,24 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }
   }, [_c('view', {
     staticClass: "top-padding"
-  }, [_c('view', {
+  }, [_vm._l((_vm.a), function(item, index) {
+    return _c('view', {
+      key: item
+    })
+  }), _vm._v(" "), _c('view', {
     staticClass: "top-padding"
   }, [_c('i-card', {
     attrs: {
       "title": "d",
       "extra": "d",
-      "thumb": "https://i.loli.net/2017/08/21/599a521472424.jpg",
+      "thumb": "cloud://got-1b.676f-got-1b/doge.png",
       "mpcomid": '14'
     }
   }, [_c('view', {
     slot: "content"
   }, [_vm._v("d")]), _vm._v(" "), _c('view', {
     slot: "footer"
-  }, [_vm._v("d")])])], 1)])])], 1)
+  }, [_vm._v("d")])])], 1)], 2)])], 1)
 }
 var staticRenderFns = []
 render._withStripped = true

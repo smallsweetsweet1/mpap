@@ -29,8 +29,9 @@
     </i-grid>
     <i-panel title="推荐" class="_i-panel data-v-6bff7160">
       <view class="_view data-v-6bff7160 top-padding">
+        <view wx:key="item" key="{{item}}" wx:for="{{a}}" wx:for-index="index" wx:for-item="item" class="_view data-v-6bff7160"></view>
         <view class="_view data-v-6bff7160 top-padding">
-          <i-card title="d" extra="d" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg" class="_i-card data-v-6bff7160">
+          <i-card title="d" extra="d" thumb="cloud://got-1b.676f-got-1b/doge.png" class="_i-card data-v-6bff7160">
             <view slot="content" class="_view data-v-6bff7160">d</view>
             <view slot="footer" class="_view data-v-6bff7160">d</view>
           </i-card>

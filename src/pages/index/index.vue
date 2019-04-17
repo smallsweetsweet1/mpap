@@ -30,9 +30,9 @@
 </i-grid>
     <i-panel title="推荐">
       <view class="top-padding">
-
+      <view v-for="item in a" :key="item"></view>
       <view class="top-padding">
-      <i-card title="d" extra="d" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+      <i-card title="d" extra="d" thumb="cloud://got-1b.676f-got-1b/doge.png">
         <view slot="content">d</view>
         <view slot="footer">d</view>
       </i-card>
@@ -78,8 +78,8 @@ export default {
     const db = wx.cloud.database({ env: 'got-1b' })
     db.collection('got-fg3e3').get().then(
       res => {
-        console.log(res)
-        this.a = res
+        console.log(res.data)
+        this.a = res.data
       }
     )
     /* wx.cloud.callFunction({ name: 'me' }).then(

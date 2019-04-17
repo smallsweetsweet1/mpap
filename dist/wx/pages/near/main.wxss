@@ -1,53 +1,6 @@
 @import "../../common/vendor.wxss";
 
-._div.data-v-338eff00 .no-border {
-  border-width: 0pt;
-}
-.top-padding.data-v-338eff00 {
-  padding-top: 50rpx;
-}
-.userinfo.data-v-338eff00 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.userinfo-avatar.data-v-338eff00 {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-.userinfo-nickname.data-v-338eff00 {
-  color: #aaa;
-}
-.usermotto.data-v-338eff00 {
-  margin-top: 300rpx;
-}
-.form-control.data-v-338eff00 {
-  display: block;
-  padding: 0 24rpx;
-  margin-bottom: 10rpx;
-  border: 2rpx solid #ccc;
-}
-.all.data-v-338eff00 {
-  width: 750rpx;
-  height: 100rpx;
-  background-color: blue;
-}
-.all.data-v-338eff00:after {
-  display: block;
-  content: '';
-  clear: both;
-}
-.left.data-v-338eff00 {
-  float: left;
-  width: 300rpx;
-  height: 100rpx;
-  background-color: red;
-}
-.right.data-v-338eff00 {
-  float: left;
-  width: 450rpx;
-  height: 100rpx;
-  background-color: green;
+page,
+page {
+  height: 100%;
 }

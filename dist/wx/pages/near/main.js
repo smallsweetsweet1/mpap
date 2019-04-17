@@ -29,12 +29,12 @@ app.$mount();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_338eff00_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_338eff00_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(37);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(29)
+  __webpack_require__(36)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -44,12 +44,12 @@ var normalizeComponent = __webpack_require__(0)
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-338eff00"
+var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_338eff00_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_338eff00_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -79,18 +79,10 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 29:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 30:
+/***/ 31:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_card__ = __webpack_require__(2);
 //
 //
 //
@@ -110,71 +102,41 @@ if (false) {(function () {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  data: function data() {
-    return {
-      current_scroll: 'tab1',
-      motto: 'Hello miniprograme',
-      userInfo: {
-        nickName: 'mpvue',
-        avatarUrl: 'http://mpvue.com/assets/logo.png'
-      }
-    };
-  },
-
-
-  components: {
-    card: __WEBPACK_IMPORTED_MODULE_0__components_card__["a" /* default */]
+  data: {
+    markers: [{
+      iconPath: '/static/images/3.png',
+      id: 0,
+      latitude: 23.099994,
+      longitude: 113.324520,
+      width: 50,
+      height: 50
+    }],
+    polyline: [{
+      points: [{
+        longitude: 113.3245211,
+        latitude: 23.10229
+      }, {
+        longitude: 113.324520,
+        latitude: 23.21229
+      }],
+      color: '#FF0000DD',
+      width: 2,
+      dottedLine: true
+    }]
   },
 
   methods: {
-    bindViewTap: function bindViewTap() {
-      var url = '../logs/main';
-      if (global.mpvuePlatform === 'wx') {
-        global.mpvue.switchTab({ url: url });
-      } else {
-        global.mpvue.navigateTo({ url: url });
-      }
+    regionchange: function regionchange(event) {
+      console.log(event);
     },
-    handleChange: function handleChange(_ref) {
-      var detail = _ref.detail;
-
-      this.setData({
-        current: detail.key
-      });
+    markertap: function markertap(event) {
+      console.log(event);
     },
-    handleChangeScroll: function handleChangeScroll(event) {
-      this.current_scroll = event.mp.detail.key;
-    },
-    clickHandle: function clickHandle(ev) {
-      console.log('clickHandle:', ev);
-      // throw {message: 'custom test'}
+    controltap: function controltap(event) {
+      console.log(event);
     }
   },
 
@@ -185,147 +147,46 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 31:
+/***/ 36:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 37:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('i-tabs', {
+  return _c('div', [_c('map', {
+    staticStyle: {
+      "width": "100%",
+      "height": "100%"
+    },
     attrs: {
-      "current": _vm.current_scroll,
-      "scroll": "",
-      "eventid": '0',
-      "mpcomid": '9'
+      "id": "map",
+      "longitude": "114.347997",
+      "latitude": "30.571331",
+      "scale": "14",
+      "controls": _vm.controls,
+      "markers": _vm.markers,
+      "polyline": _vm.polyline,
+      "show-location": "",
+      "eventid": '0'
     },
     on: {
-      "change": _vm.handleChangeScroll
+      "controltap": function($event) {
+        _vm.controltap($event)
+      },
+      "markertap": function($event) {
+        _vm.markertap($event)
+      },
+      "regionchange": function($event) {
+        _vm.regionchange($event)
+      }
     }
-  }, [_c('i-tab', {
-    key: "tab1",
-    attrs: {
-      "title": "选项1",
-      "mpcomid": '0'
-    }
-  }), _vm._v(" "), _c('i-tab', {
-    key: "tab2",
-    attrs: {
-      "title": "选项2",
-      "mpcomid": '1'
-    }
-  }), _vm._v(" "), _c('i-tab', {
-    key: "tab3",
-    attrs: {
-      "title": "选项3",
-      "mpcomid": '2'
-    }
-  }), _vm._v(" "), _c('i-tab', {
-    key: "tab4",
-    attrs: {
-      "title": "选项4",
-      "mpcomid": '3'
-    }
-  }), _vm._v(" "), _c('i-tab', {
-    key: "tab5",
-    attrs: {
-      "title": "选项5",
-      "mpcomid": '4'
-    }
-  }), _vm._v(" "), _c('i-tab', {
-    key: "tab6",
-    attrs: {
-      "title": "选项6",
-      "mpcomid": '5'
-    }
-  }), _vm._v(" "), _c('i-tab', {
-    key: "tab7",
-    attrs: {
-      "title": "选项7",
-      "mpcomid": '6'
-    }
-  }), _vm._v(" "), _c('i-tab', {
-    key: "tab8",
-    attrs: {
-      "title": "选项8",
-      "mpcomid": '7'
-    }
-  }), _vm._v(" "), _c('i-tab', {
-    key: "tab9",
-    attrs: {
-      "title": "选项9",
-      "mpcomid": '8'
-    }
-  })], 1), _vm._v(" "), _c('view', {
-    staticClass: "top-padding"
-  }, [_c('i-card', {
-    attrs: {
-      "title": "良品铺子",
-      "extra": "零食",
-      "thumb": "https://i.loli.net/2017/08/21/599a521472424.jpg",
-      "mpcomid": '10'
-    }
-  }, [_c('view', {
-    slot: "content"
-  }, [_vm._v("好多不错的零食")]), _vm._v(" "), _c('view', {
-    slot: "footer"
-  }, [_vm._v("后街1-22")])]), _vm._v(" "), _c('view', {
-    staticClass: "top-padding"
-  }), _vm._v(" "), _c('i-card', {
-    attrs: {
-      "title": "卡片标题",
-      "i-class": "top-padding",
-      "extra": "额外内容",
-      "thumb": "https://i.loli.net/2017/08/21/599a521472424.jpg",
-      "mpcomid": '11'
-    }
-  }, [_c('view', {
-    slot: "content"
-  }, [_vm._v("内容不错")]), _vm._v(" "), _c('view', {
-    slot: "footer"
-  }, [_vm._v("尾部内容")])]), _vm._v(" "), _c('view', {
-    staticClass: "top-padding"
-  }), _vm._v(" "), _c('i-card', {
-    attrs: {
-      "title": "卡片标题",
-      "i-class": "top-padding",
-      "extra": "额外内容",
-      "thumb": "https://i.loli.net/2017/08/21/599a521472424.jpg",
-      "mpcomid": '12'
-    }
-  }, [_c('view', {
-    slot: "content"
-  }, [_vm._v("内容不错")]), _vm._v(" "), _c('view', {
-    slot: "footer"
-  }, [_vm._v("尾部内容")])]), _vm._v(" "), _c('view', {
-    staticClass: "top-padding"
-  }), _vm._v(" "), _c('i-card', {
-    attrs: {
-      "title": "卡片标题",
-      "i-class": "top-padding",
-      "extra": "额外内容",
-      "thumb": "https://i.loli.net/2017/08/21/599a521472424.jpg",
-      "mpcomid": '13'
-    }
-  }, [_c('view', {
-    slot: "content"
-  }, [_vm._v("内容不错")]), _vm._v(" "), _c('view', {
-    slot: "footer"
-  }, [_vm._v("尾部内容")])]), _vm._v(" "), _c('view', {
-    staticClass: "top-padding"
-  }), _vm._v(" "), _c('i-card', {
-    attrs: {
-      "title": "卡片标题",
-      "i-class": "top-padding",
-      "extra": "额外内容",
-      "thumb": "https://i.loli.net/2017/08/21/599a521472424.jpg",
-      "mpcomid": '14'
-    }
-  }, [_c('view', {
-    slot: "content"
-  }, [_vm._v("内容不错")]), _vm._v(" "), _c('view', {
-    slot: "footer"
-  }, [_vm._v("尾部内容")])]), _vm._v(" "), _c('view', {
-    staticClass: "top-padding"
-  })], 1)], 1)
+  })], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
