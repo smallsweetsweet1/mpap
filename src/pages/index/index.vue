@@ -1,57 +1,47 @@
 <template>
-  <div @click="clickHandle">
-    <i-notice-bar v-if='show' icon="systemprompt" loop>
-    {{notice}}啦啦啦啦
-    </i-notice-bar>
-    <i-grid i-class="no-border">
-    <i-grid-item v-for="item in grids" :key="item" i-class="no-border">
-    <i-grid-label>{{item}}</i-grid-label>
-    </i-grid-item>
-    </i-grid>
-    <i-grid i-class="no-border">
-    <i-grid-item i-class="no-border">
-        <i-grid-icon>
-            <image src="/static/images/1.png" />
-        </i-grid-icon>
-        <i-grid-label>lemon</i-grid-label>
-    </i-grid-item>
-    <i-grid-item i-class="no-border">
-        <i-grid-icon>
-            <image src="/static/images/2.png" />
-        </i-grid-icon>
-        <i-grid-label>banana</i-grid-label>
-    </i-grid-item>
-    <i-grid-item i-class="no-border">
-        <i-grid-icon>
-            <image src="/static/images/3.png" />
-        </i-grid-icon>
-        <i-grid-label>apple</i-grid-label>
-    </i-grid-item>
-</i-grid>
-    <i-panel title="推荐">
-      <view class="top-padding">
-      <view v-for="item in a" :key="item"></view>
-      <view class="top-padding">
-      <i-card title="d" extra="d" thumb="cloud://got-1b.676f-got-1b/doge.png">
-        <view slot="content">d</view>
-        <view slot="footer">d</view>
+  <div>
+    <swiper
+      :indicator-dots="indicatorDots"
+      :autoplay="autoplay"
+      :interval="interval"
+      :duration="duration"
+      style="height:200px"
+    >
+    <block v-for="item in imgUrls" :key="item">
+      <swiper-item>
+        <image :src="item" style="width:100%;"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <i-grid i-class="no-border">
+      <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids" :key="item">
+          <i-grid-icon>
+              <image :src="item.img" />
+          </i-grid-icon>
+          <i-grid-label>{{item.type}}</i-grid-label>
+      </i-grid-item>
+  </i-grid>
+  <i-panel title="热门资源">
+    <view>
+      <i-card @click="goType(item.type)" i-class="split" v-for="item in recommand" :key="item" :extra="item.name" :thumb="item.img">
+          <view slot="content">简介{{item.remark}}</view>
+          <view slot="footer">链接{{item.address}}</view>
       </i-card>
     </view>
-
-      </view>
-    </i-panel>
+  </i-panel>
   </div>
 </template>
 
 <script>
 import card from '@/components/card'
+import top from '@/data/top.json'
 
 export default {
   data () {
     return {
-      notice: '2019.04.03',
-      grids: ['a', 'b'],
-      show: true
+      imgUrls: [
+        ''
+      ],
     }
   },
 
@@ -59,91 +49,26 @@ export default {
     card
   },
 
-  methods: {
-    bindViewTap () {
-      const url = '../logs/main'
-      if (mpvuePlatform === 'wx') {
-        mpvue.switchTab({ url })
-      } else {
-        mpvue.navigateTo({ url })
-      }
+   methods: {
+    goList (url) {
+      mpvue.navigateTo({ url })
     },
-    clickHandle (ev) {
-      console.log('clickHandle:', ev)
-      // throw {message: 'custom test'}
+    goType (type) {
+      let url = '../list/main?type=' + type
+      mpvue.navigateTo({ url })
     }
   },
 
-  created () {
-    const db = wx.cloud.database({ env: 'got-1b' })
-    db.collection('got-fg3e3').get().then(
-      res => {
-        console.log(res.data)
-        this.a = res.data
-      }
-    )
-    /* wx.cloud.callFunction({ name: 'me' }).then(
-      res => { console.log(res) }
-    ) */
+   created () {
+    // let app = getApp()
   }
 }
 </script>
 
-<style scoped>
-div >>> .no-border {
+<style scoped>div >>> .no-border {
   border-width: 0pt;
 }
-div >>> .top-padding {
-  padding-top: 50rpx;
-}
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 150px;
-}
-
-.form-control {
-  display: block;
-  padding: 0 12px;
-  margin-bottom: 5px;
-  border: 1px solid #ccc;
-}
-.all{
-  width:7.5rem;
-  height:1rem;
-  background-color:blue;
-}
-.all:after{
-  display:block;
-  content:'';
-  clear:both;
-}
-.left{
-  float:left;
-  width:3rem;
-  height:1rem;
-  background-color:red;
-}
-
-.right{
-  float:left;
-  width:4.5rem;
-  height:1rem;
-  background-color:green;
+div >>> .split {
+  margin-bottom: 10pt;
 }
 </style>
