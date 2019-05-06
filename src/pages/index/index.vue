@@ -42,6 +42,18 @@ export default {
       imgUrls: [
         ''
       ],
+      indicatorDots: true,
+      autoplay: true,
+      interval: 5000,
+      duration: 1000,
+      grids: [
+        {type:'',img:'',"url":'../list/main?type=1'},
+        {type:'',img:'',"url":'../list/main?type=2'},
+        {type:'',img:'',"url":'../list/main?type=3'},
+        {type:'',img:'',"url":'../list/main?type=4'},
+        {type:'',img:'',"url":'../list/main?type=5'}
+      ],
+      recommand: top
     }
   },
 
