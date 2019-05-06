@@ -12,7 +12,6 @@
 	"compileType": "miniprogram",
 	"appid": "wxbd120a794340d10f",
 	"projectname": "my-project",
-	"cloudfunctionRoot": "functions/",
 	"libVersion": "2.6.5",
 	"condition": {
 		"search": {
