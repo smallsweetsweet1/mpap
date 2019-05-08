@@ -40,8 +40,8 @@ export default {
   data () {
     return {
       imgUrls: [
-        'https://puui.qpic.cn/vcover_vt_pic/0/nilk5fd4bkqdk3a1557023984/350'
-        'https://puui.qpic.cn/vcover_vt_pic/0/tmyhttuwxw9ifza1556087236/260'
+        'https://puui.qpic.cn/vcover_vt_pic/0/nilk5fd4bkqdk3a1557023984/350',
+        'https://puui.qpic.cn/vcover_vt_pic/0/tmyhttuwxw9ifza1556087236/260',
         'https://puui.qpic.cn/vcover_vt_pic/0/zmfj41ian3z6rbl1543634205/260'
       ],
       indicatorDots: true,
