@@ -40,18 +40,18 @@ export default {
   data () {
     return {
       imgUrls: [
-        ''
+        'https://puui.qpic.cn/vcover_vt_pic/0/nilk5fd4bkqdk3a1557023984/350'
+        'https://puui.qpic.cn/vcover_vt_pic/0/tmyhttuwxw9ifza1556087236/260'
+        'https://puui.qpic.cn/vcover_vt_pic/0/zmfj41ian3z6rbl1543634205/260'
       ],
       indicatorDots: true,
       autoplay: true,
       interval: 5000,
       duration: 1000,
       grids: [
-        {type:'',img:'',"url":'../list/main?type=1'},
-        {type:'',img:'',"url":'../list/main?type=2'},
-        {type:'',img:'',"url":'../list/main?type=3'},
-        {type:'',img:'',"url":'../list/main?type=4'},
-        {type:'',img:'',"url":'../list/main?type=5'}
+        {type:'美剧',img:'',"url":'../list/main?type=1'},
+        {type:'英剧',img:'',"url":'../list/main?type=2'},
+        {type:'日剧',img:'',"url":'../list/main?type=3'}
       ],
       recommand: top
     }
