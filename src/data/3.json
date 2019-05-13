@@ -1,7 +1,7 @@
 [
-    {"id":1,"name":"","score":"","img":"","type":3},
-    {"id":2,"name":"","score":"","img":"","type":3},
-    {"id":3,"name":"","score":"","img":"","type":3},
-    {"id":4,"name":"","score":"","img":"","type":3},
-    {"id":5,"name":"","score":"","img":"","type":3}
+    {"id":1,"name":"","score":"","address":"","img":"","type":3},
+    {"id":2,"name":"","score":"","address":"","img":"","type":3},
+    {"id":3,"name":"","score":"","address":"","img":"","type":3},
+    {"id":4,"name":"","score":"","address":"","img":"","type":3},
+    {"id":5,"name":"","score":"","address":"","img":"","type":3}
 ]
