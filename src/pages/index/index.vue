@@ -49,9 +49,9 @@ export default {
       interval: 5000,
       duration: 1000,
       grids: [
-        {type:'美剧',img:'',"url":'../list/main?type=1'},
-        {type:'英剧',img:'',"url":'../list/main?type=2'},
-        {type:'日剧',img:'',"url":'../list/main?type=3'}
+        { type:'美剧',img:'',"url":'../list/main?type=1'},
+        { type:'英剧',img:'',"url":'../list/main?type=2'},
+        { type:'日剧',img:'',"url":'../list/main?type=3'}
       ],
       recommand: top
     }

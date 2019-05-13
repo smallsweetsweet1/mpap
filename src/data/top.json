@@ -1,0 +1,8 @@
+[
+    {"id":1,"name":"","address":"","score":"","img":"/static/top/k.png","type":1,"latitude": 30.576413,"longitude": 114.339437},
+    {"id":2,"name":"","address":"","score":"","img":"/static/top/j.png","type":4,"latitude": 30.579604,"longitude": 114.338552},
+    {"id":3,"name":"","address":"","score":"","img":"/static/top/y.png","type":3,"latitude": 30.573291,"longitude": 114.333172},
+    {"id":4,"name":"","address":"","score":"","img":"/static/grids/3.png","type":3,"latitude": 30.575157,"longitude": 114.332303},
+    {"id":5,"name":"","address":"","score":"","img":"/static/top/n.png","type":5,"latitude": 30.579535,"longitude": 114.330876},
+    {"id":6,"name":"","address":"","score":"","img":"/static/top/h.png","type":4,"latitude": 30.579369,"longitude": 114.326992}
+]
