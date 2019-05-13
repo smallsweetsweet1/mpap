@@ -61,7 +61,7 @@ export default {
     card
   },
 
-   methods: {
+  methods: {
     goList (url) {
       mpvue.navigateTo({ url })
     },
@@ -71,7 +71,7 @@ export default {
     }
   },
 
-   created () {
+  created () {
     // let app = getApp()
   }
 }

@@ -21,9 +21,9 @@ export default {
 
   data () {
     return {
-      name:"",
-      address:"",
-      score:""
+       name:"",
+       address:"",
+       score:""
     }
   },
 
