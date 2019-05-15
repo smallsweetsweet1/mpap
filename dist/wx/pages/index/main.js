@@ -131,7 +131,6 @@ if (false) {(function () {
 //
 //
 //
-//
 
 
 
@@ -274,7 +273,6 @@ if (false) {
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('swiper', {
-    staticStyle: {},
     attrs: {
       "indicator-dots": _vm.indicatorDots,
       "autoplay": _vm.autoplay,

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <i-panel title="分类">
+    <i-panel>
       <view>
         <i-card i-class="split" v-for="item in recommand" :key="item" :extra="item.name" :thumb="item.img">
             <view slot="content">评分{{item.score}}</view>
