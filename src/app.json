@@ -1,8 +1,7 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/mine/main",
-    "pages/logs/main"
+    "pages/mine/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,11 +25,6 @@
       "pagePath": "pages/mine/main",
       "iconPath": "static/tabs/mineb.png",
       "selectedIconPath": "static/tabs/mine.png"
-    }, {
-      "text": "登陆",
-      "pagePath": "pages/logs/main",
-      "iconPath": "static/tabs/mineb.png",
-      "selectedIconPath": "static/tabs/mine.png"
     }],
 
     "items": [{
@@ -41,11 +35,6 @@
     },{
       "name": "我的",
       "pagePath": "pages/mine/main",
-      "icon": "static/tabs/mineb.png",
-      "activeIcon": "static/tabs/mine.png"
-    }, {
-      "name": "登陆",
-      "pagePath": "pages/logs/main",
       "icon": "static/tabs/mineb.png",
       "activeIcon": "static/tabs/mine.png"
     }],

@@ -2,14 +2,14 @@ require("../../common/manifest.js")
 require("../../common/vendor.js")
 global.webpackJsonpMpvue([3],{
 
-/***/ 22:
+/***/ 27:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(28);
 
 
 
@@ -25,16 +25,16 @@ app.$mount();
 
 /***/ }),
 
-/***/ 23:
+/***/ 28:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_3fb4bd2a_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_3fb4bd2a_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(31);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(24)
+  __webpack_require__(29)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -79,18 +79,17 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 24:
+/***/ 29:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 25:
+/***/ 30:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_card__ = __webpack_require__(2);
 //
 //
 //
@@ -108,48 +107,52 @@ if (false) {(function () {
 //
 //
 //
-
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
-      motto: 'Hello miniprograme',
-      userInfo: {
-        nickName: 'mpvue',
-        avatarUrl: 'http://mpvue.com/assets/logo.png'
-      }
+      name: '',
+      address: '',
+      score: ''
     };
   },
 
 
-  components: {
-    card: __WEBPACK_IMPORTED_MODULE_0__components_card__["a" /* default */]
-  },
-
   methods: {
-    bindViewTap: function bindViewTap() {
-      var url = '../logs/main';
-      if (global.mpvuePlatform === 'wx') {
-        global.mpvue.switchTab({ url: url });
-      } else {
-        global.mpvue.navigateTo({ url: url });
-      }
+    changeName: function changeName(event) {
+      this.name = event.mp.detail.detail.value;
     },
-    clickHandle: function clickHandle(ev) {
-      console.log('clickHandle:', ev);
-      // throw {message: 'custom test'}
+    changeScore: function changeScore(event) {
+      this.score = event.mp.detail.detail.value;
+    },
+    changeAddress: function changeAddress(event) {
+      this.address = event.mp.detail.detail.value;
+    },
+    handleClick: function handleClick() {
+      if (this.name && this.score) {
+        wx.showToast({
+          title: '推荐了' + this.name,
+          icon: 'success',
+          duration: 2000
+        });
+        // TODO:将推荐数据提交到云数据库
+      } else {
+        wx.showToast({
+          title: '信息不完整',
+          icon: 'none',
+          duration: 2000
+        });
+      }
     }
   },
 
-  created: function created() {
-    // let app = getApp()
-  }
+  created: function created() {}
 });
 
 /***/ }),
 
-/***/ 26:
+/***/ 31:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -168,28 +171,65 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "type": "userNickName",
       "mpcomid": '1'
     }
-  })], 1), _vm._v(" "), _c('i-cell-group', {
+  })], 1), _vm._v(" "), _c('i-panel', {
     attrs: {
-      "mpcomid": '4'
+      "title": "分享视频",
+      "mpcomid": '5'
     }
-  }, [_c('i-cell', {
+  }, [_c('i-input', {
     attrs: {
-      "title": "我的收藏",
-      "is-link": "",
-      "url": "/pages/logs/main",
+      "value": _vm.name,
+      "title": "名称",
+      "autofocus": "",
+      "placeholder": "请输入视频名称",
+      "maxlength": "20",
+      "eventid": '0',
       "mpcomid": '2'
-    }
-  }), _vm._v(" "), _c('i-cell', {
-    attrs: {
-      "title": "接收通知",
-      "mpcomid": '3'
-    }
-  }, [_c('switch', {
-    attrs: {
-      "checked": ""
     },
-    slot: "footer"
-  })])], 1)], 1)
+    on: {
+      "change": function($event) {
+        _vm.changeName($event)
+      }
+    }
+  }), _vm._v(" "), _c('i-input', {
+    attrs: {
+      "value": _vm.address,
+      "title": "视频评价",
+      "placeholder": "评分：",
+      "maxlength": "5",
+      "eventid": '1',
+      "mpcomid": '3'
+    },
+    on: {
+      "change": function($event) {
+        _vm.changeScore($event)
+      }
+    }
+  }), _vm._v(" "), _c('i-input', {
+    attrs: {
+      "value": _vm.address,
+      "title": "视频链接",
+      "placeholder": "链接：",
+      "maxlength": "200",
+      "eventid": '2',
+      "mpcomid": '4'
+    },
+    on: {
+      "change": function($event) {
+        _vm.changeAddress($event)
+      }
+    }
+  })], 1), _vm._v(" "), _c('i-button', {
+    attrs: {
+      "type": "warning",
+      "size": "default",
+      "eventid": '3',
+      "mpcomid": '6'
+    },
+    on: {
+      "click": _vm.handleClick
+    }
+  }, [_vm._v("分享")])], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -204,4 +244,4 @@ if (false) {
 
 /***/ })
 
-},[22]);
+},[27]);

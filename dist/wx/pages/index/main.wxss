@@ -1,53 +1,10 @@
-@import "../../common/vendor.wxss";
 
 ._div.data-v-6bff7160 .no-border {
   border-width: 0pt;
 }
-._div.data-v-6bff7160 .top-padding {
-  padding-top: 50rpx;
+._div.data-v-6bff7160 .split {
+  margin-bottom: 10pt;
 }
-.userinfo.data-v-6bff7160 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.userinfo-avatar.data-v-6bff7160 {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-.userinfo-nickname.data-v-6bff7160 {
-  color: #aaa;
-}
-.usermotto.data-v-6bff7160 {
-  margin-top: 300rpx;
-}
-.form-control.data-v-6bff7160 {
-  display: block;
-  padding: 0 24rpx;
-  margin-bottom: 10rpx;
-  border: 2rpx solid #ccc;
-}
-.all.data-v-6bff7160 {
-  width: 750rpx;
-  height: 100rpx;
-  background-color: blue;
-}
-.all.data-v-6bff7160:after {
-  display: block;
-  content: '';
-  clear: both;
-}
-.left.data-v-6bff7160 {
-  float: left;
-  width: 300rpx;
-  height: 100rpx;
-  background-color: red;
-}
-.right.data-v-6bff7160 {
-  float: left;
-  width: 450rpx;
-  height: 100rpx;
-  background-color: green;
+.card {
+  padding: 20rpx;
 }
