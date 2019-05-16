@@ -8,12 +8,12 @@
     >
     <block v-for="item in imgUrls" :key="item">
       <swiper-item>
-        <image :src="item" style="width:100%;"/>
+        <image :src="item" style="width:100%;hight:100%"/>
       </swiper-item>
     </block>
   </swiper>
-  <i-grid i-class="no-border">
-      <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids" :key="item">
+  <i-grid i-class="border">
+      <i-grid-item @click="goList(item.url)" i-class="border" v-for="item in grids" :key="item">
           <i-grid-icon>
               <image :src="item.img" />
           </i-grid-icon>
@@ -76,8 +76,9 @@ export default {
 }
 </script>
 
-<style scoped>div >>> .no-border {
-  border-width: 0pt;
+<style scoped>
+div >>> .border {
+  border-width: 10pt;
 }
 div >>> .split {
   margin-bottom: 10pt;

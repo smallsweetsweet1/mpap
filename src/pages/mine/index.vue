@@ -38,7 +38,7 @@ export default {
       this.address = event.mp.detail.detail.value
     },
     handleClick () {
-      if (this.name && this.score) {
+      if (this.name && this.score && this.address) {
         wx.showToast({
           title: '推荐了' + this.name,
           icon: 'success',
