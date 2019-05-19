@@ -1,7 +1,7 @@
 [
-    {"id":1,"name":"权力的游戏","score":"9.6","address":"","img":"/static/grids/1.png","type":1,"latitude": 30.575702,"longitude": 114.323119},
-    {"id":2,"name":"切尔诺贝利","score":"8.8","address":"","img":"/static/grids/1.png","type":1,"latitude": 30.574270,"longitude": 114.330533},
-    {"id":3,"name":"神盾局特工","score":"8.5","address":"","img":"/static/grids/1.png","type":1,"latitude": 30.580126,"longitude": 114.331734},
-    {"id":4,"name":"越狱","score":"9.2","address":"","img":"/static/grids/1.png","type":1,"latitude": 30.579295,"longitude": 114.326992},
-    {"id":5,"name":"西部世界","score":"","address":"","img":"/static/grids/1.png","type":1,"latitude": 30.576413,"longitude": 114.339437}
+    {"id":1,"name":"权力的游戏","score":"9.6","link":"","img":"cloud://data-1.6461-data-1/video/got.jpg","type":1,"latitude": 30.575702,"longitude": 114.323119},
+    {"id":2,"name":"切尔诺贝利","score":"8.8","link":"","img":"cloud://data-1.6461-data-1/video/chernobyl.jpg","type":1,"latitude": 30.574270,"longitude": 114.330533},
+    {"id":3,"name":"神盾局特工","score":"8.5","link":"","img":"cloud://data-1.6461-data-1/video/sheild.jpg","type":1,"latitude": 30.580126,"longitude": 114.331734},
+    {"id":4,"name":"越狱","score":"9.2","link":"","img":"cloud://data-1.6461-data-1/video/prisonbreak.jpg","type":1,"latitude": 30.579295,"longitude": 114.326992},
+    {"id":5,"name":"西部世界","score":"8.8","link":"","img":"cloud://data-1.6461-data-1/video/westworld.jpg","type":1,"latitude": 30.576413,"longitude": 114.339437}
 ]

@@ -107,6 +107,7 @@ if (false) {(function () {
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -130,7 +131,7 @@ if (false) {(function () {
       this.address = event.mp.detail.detail.value;
     },
     handleClick: function handleClick() {
-      if (this.name && this.score) {
+      if (this.name && this.score && this.address) {
         wx.showToast({
           title: '推荐了' + this.name,
           icon: 'success',
@@ -229,7 +230,12 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     on: {
       "click": _vm.handleClick
     }
-  }, [_vm._v("分享")])], 1)
+  }, [_vm._v("分享")]), _vm._v(" "), _c('i-toast', {
+    attrs: {
+      "id": "toast",
+      "mpcomid": '7'
+    }
+  })], 1)
 }
 var staticRenderFns = []
 render._withStripped = true

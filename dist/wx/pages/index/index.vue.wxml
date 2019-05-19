@@ -1,17 +1,14 @@
-<template name="de54ed00">
+<template name="2de1dcc1">
   <view class="_div data-v-6bff7160">
-    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="_swiper data-v-6bff7160">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: 560rpx" class="_swiper data-v-6bff7160">
       <block wx:key="item" key="{{item}}" wx:for="{{imgUrls}}" wx:for-index="index" wx:for-item="item">
         <swiper-item class="_swiper-item data-v-6bff7160">
-          <image src="{{item}}" style="width:100%;" class="_image data-v-6bff7160"></image>
+          <image src="{{item}}" style="width:100%;hight:100%" class="_image data-v-6bff7160"></image>
         </swiper-item>
       </block>
     </swiper>
-    <i-grid i-class="no-border" class="_i-grid data-v-6bff7160">
-      <i-grid-item bindtap="handleProxy" i-class="no-border" wx:key="item" key="{{item}}" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{grids}}" wx:for-index="index" wx:for-item="item" class="_i-grid-item data-v-6bff7160">
-        <i-grid-icon class="_i-grid-icon data-v-6bff7160">
-          <image src="{{item.img}}" class="_image data-v-6bff7160"></image>
-        </i-grid-icon>
+    <i-grid i-class="border" class="_i-grid data-v-6bff7160">
+      <i-grid-item bindtap="handleProxy" i-class="border" wx:key="item" key="{{item}}" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{grids}}" wx:for-index="index" wx:for-item="item" class="_i-grid-item data-v-6bff7160">
         <i-grid-label class="_i-grid-label data-v-6bff7160">{{item.type}}</i-grid-label>
       </i-grid-item>
     </i-grid>

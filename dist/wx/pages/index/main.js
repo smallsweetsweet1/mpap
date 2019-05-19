@@ -129,8 +129,6 @@ if (false) {(function () {
 //
 //
 //
-//
-//
 
 
 
@@ -273,6 +271,9 @@ if (false) {
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('swiper', {
+    staticStyle: {
+      "height": "560rpx"
+    },
     attrs: {
       "indicator-dots": _vm.indicatorDots,
       "autoplay": _vm.autoplay,
@@ -288,7 +289,8 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       }
     }, [_c('image', {
       staticStyle: {
-        "width": "100%"
+        "width": "100%",
+        "hight": "100%"
       },
       attrs: {
         "src": item
@@ -296,39 +298,31 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     })])], 1)
   })), _vm._v(" "), _c('i-grid', {
     attrs: {
-      "i-class": "no-border",
-      "mpcomid": '4'
+      "i-class": "border",
+      "mpcomid": '3'
     }
   }, _vm._l((_vm.grids), function(item, index) {
     return _c('i-grid-item', {
       key: item,
       attrs: {
-        "i-class": "no-border",
+        "i-class": "border",
         "eventid": '0_' + index,
-        "mpcomid": '3_' + index
+        "mpcomid": '2_' + index
       },
       on: {
         "click": function($event) {
           _vm.goList(item.url)
         }
       }
-    }, [_c('i-grid-icon', {
+    }, [_c('i-grid-label', {
       attrs: {
         "mpcomid": '1_' + index
-      }
-    }, [_c('image', {
-      attrs: {
-        "src": item.img
-      }
-    })]), _vm._v(" "), _c('i-grid-label', {
-      attrs: {
-        "mpcomid": '2_' + index
       }
     }, [_vm._v(_vm._s(item.type))])], 1)
   })), _vm._v(" "), _c('i-panel', {
     attrs: {
       "title": "热门资源",
-      "mpcomid": '6'
+      "mpcomid": '5'
     }
   }, [_c('view', _vm._l((_vm.recommand), function(item, index) {
     return _c('i-card', {
@@ -338,7 +332,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         "extra": item.name,
         "thumb": item.img,
         "eventid": '1_' + index,
-        "mpcomid": '5_' + index
+        "mpcomid": '4_' + index
       },
       on: {
         "click": function($event) {

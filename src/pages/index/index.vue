@@ -5,6 +5,7 @@
       :autoplay="autoplay"
       :interval="interval"
       :duration="duration"
+      style="height: 560rpx"
     >
     <block v-for="item in imgUrls" :key="item">
       <swiper-item>
@@ -14,9 +15,6 @@
   </swiper>
   <i-grid i-class="border">
       <i-grid-item @click="goList(item.url)" i-class="border" v-for="item in grids" :key="item">
-          <i-grid-icon>
-              <image :src="item.img" />
-          </i-grid-icon>
           <i-grid-label>{{item.type}}</i-grid-label>
       </i-grid-item>
   </i-grid>
@@ -24,7 +22,7 @@
     <view>
       <i-card @click="goType(item.type)" i-class="split" v-for="item in recommand" :key="item" :extra="item.name" :thumb="item.img">
           <view slot="content">简介{{item.remark}}</view>
-          <view slot="footer">链接{{item.address}}</view>
+          <view slot="footer">链接{{item.link}}</view>
       </i-card>
     </view>
   </i-panel>
@@ -82,5 +80,9 @@ div >>> .border {
 }
 div >>> .split {
   margin-bottom: 10pt;
+}
+div >>> .swiper {
+  margin-left: 10pt;
+  margin-right: 10pt;
 }
 </style>

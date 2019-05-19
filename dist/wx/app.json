@@ -6,12 +6,12 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "ZzVideo",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#999",
-    "backgroundColor": "#fafafa",
+    "backgroundColor": "#98F5FF",
     "selectedColor": "#333",
     "borderStyle": "white",
 
@@ -38,6 +38,7 @@
       "icon": "static/tabs/mineb.png",
       "activeIcon": "static/tabs/mine.png"
     }],
-    "position": "bottom"
+    "position": "bottom",
+    "cloud": true
   }
 }

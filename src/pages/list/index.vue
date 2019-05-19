@@ -4,7 +4,7 @@
       <view>
         <i-card i-class="split" v-for="item in recommand" :key="item" :extra="item.name" :thumb="item.img">
             <view slot="content">评分{{item.score}}</view>
-            <view slot="footer">链接{{item.address}}</view>
+            <view slot="footer">链接{{item.link}}</view>
         </i-card>
       </view>
     </i-panel>

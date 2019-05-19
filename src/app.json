@@ -38,6 +38,7 @@
       "icon": "static/tabs/mineb.png",
       "activeIcon": "static/tabs/mine.png"
     }],
-    "position": "bottom"
+    "position": "bottom",
+    "cloud": true
   }
 }

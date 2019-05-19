@@ -1,4 +1,4 @@
-<template name="b32e8efe">
+<template name="16d47920">
   <view class="_div data-v-3fb4bd2a">
     <view class="_view data-v-3fb4bd2a userinfo">
       <view class="_view data-v-3fb4bd2a userinfo-avatar">
@@ -12,5 +12,6 @@
       <i-input value="{{address}}" bindchange="handleProxy" title="视频链接" placeholder="链接：" maxlength="200" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_i-input data-v-3fb4bd2a"></i-input>
     </i-panel>
     <i-button bindtap="handleProxy" type="warning" size="default" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_i-button data-v-3fb4bd2a">分享</i-button>
+    <i-toast id="toast" class="_i-toast data-v-3fb4bd2a"></i-toast>
   </view>
 </template>

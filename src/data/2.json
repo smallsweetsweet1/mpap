@@ -1,5 +1,5 @@
 [
-    {"id":1,"name":"神探夏洛克","score":"9.5","address":"","img":"/static/grids/1.png","type":2,"latitude": 30.575702,"longitude": 114.323119},
-    {"id":2,"name":"保镖","score":"9.2","address":"","img":"/static/grids/1.png","type":2,"latitude": 30.574270,"longitude": 114.330533},
-    {"id":3,"name":"梅尔洛斯","score":"8.7","address":"","img":"/static/grids/1.png","type":2,"latitude": 30.580126,"longitude": 114.331734}
+    {"id":1,"name":"神探夏洛克","score":"9.5","link":"","img":"cloud://data-1.6461-data-1/video/sherlock.jpg","type":2,"latitude": 30.575702,"longitude": 114.323119},
+    {"id":2,"name":"保镖","score":"9.2","link":"","img":"cloud://data-1.6461-data-1/video/bodyguard.jpg","type":2,"latitude": 30.574270,"longitude": 114.330533},
+    {"id":3,"name":"梅尔洛斯","score":"8.7","link":"","img":"cloud://data-1.6461-data-1/video/Melrose .jpg","type":2,"latitude": 30.580126,"longitude": 114.331734}
 ]
