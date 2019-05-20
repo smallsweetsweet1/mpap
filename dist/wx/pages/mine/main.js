@@ -2,14 +2,14 @@ require("../../common/manifest.js")
 require("../../common/vendor.js")
 global.webpackJsonpMpvue([3],{
 
-/***/ 27:
+/***/ 26:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(27);
 
 
 
@@ -25,16 +25,16 @@ app.$mount();
 
 /***/ }),
 
-/***/ 28:
+/***/ 27:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_3fb4bd2a_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_3fb4bd2a_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(32);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(29)
+  __webpack_require__(28)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -79,7 +79,7 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 29:
+/***/ 28:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -109,12 +109,14 @@ if (false) {(function () {
 //
 //
 
+var _require = __webpack_require__(31),
+    $Toast = _require.$Toast;
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
       name: '',
-      address: '',
+      link: '',
       score: ''
     };
   },
@@ -127,22 +129,27 @@ if (false) {(function () {
     changeScore: function changeScore(event) {
       this.score = event.mp.detail.detail.value;
     },
-    changeAddress: function changeAddress(event) {
-      this.address = event.mp.detail.detail.value;
+    changeLink: function changeLink(event) {
+      this.link = event.mp.detail.detail.value;
     },
     handleClick: function handleClick() {
-      if (this.name && this.score && this.address) {
-        wx.showToast({
-          title: '推荐了' + this.name,
-          icon: 'success',
-          duration: 2000
+      if (this.name && this.score && this.link) {
+        var event = {
+          name: this.name,
+          score: this.score,
+          link: this.link
+        };
+        wx.cloud.callFunctiopn({ name: 'new_video', data: event }).then(function (res) {
+          console.log(res);
         });
-        // TODO:将推荐数据提交到云数据库
+        $Toast({
+          content: '数据已提交',
+          type: 'success'
+        });
       } else {
-        wx.showToast({
-          title: '信息不完整',
-          icon: 'none',
-          duration: 2000
+        $Toast({
+          content: '数据不完整',
+          type: 'warning'
         });
       }
     }
@@ -154,6 +161,49 @@ if (false) {(function () {
 /***/ }),
 
 /***/ 31:
+/***/ (function(module, exports) {
+
+function getCtx (selector) {
+    const pages = getCurrentPages();
+    const ctx = pages[pages.length - 1];
+
+    const componentCtx = ctx.selectComponent(selector);
+
+    if (!componentCtx) {
+        console.error('无法找到对应的组件，请按文档说明使用组件');
+        return null;
+    }
+    return componentCtx;
+}
+
+function Toast(options) {
+    const { selector = '#toast' } = options;
+    const ctx = getCtx(selector);
+
+    ctx.handleShow(options);
+}
+
+Toast.hide = function (selector = '#toast') {
+    const ctx = getCtx(selector);
+
+    ctx.handleHide();
+};
+
+function Message(options) {
+    const { selector = '#message' } = options;
+    const ctx = getCtx(selector);
+
+    ctx.handleShow(options);
+}
+
+module.exports = {
+    $Toast: Toast,
+    $Message: Message
+};
+
+/***/ }),
+
+/***/ 32:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -194,7 +244,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }
   }), _vm._v(" "), _c('i-input', {
     attrs: {
-      "value": _vm.address,
+      "value": _vm.score,
       "title": "视频评价",
       "placeholder": "评分：",
       "maxlength": "5",
@@ -208,7 +258,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }
   }), _vm._v(" "), _c('i-input', {
     attrs: {
-      "value": _vm.address,
+      "value": _vm.link,
       "title": "视频链接",
       "placeholder": "链接：",
       "maxlength": "200",
@@ -217,7 +267,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     },
     on: {
       "change": function($event) {
-        _vm.changeAddress($event)
+        _vm.changeLink($event)
       }
     }
   })], 1), _vm._v(" "), _c('i-button', {
@@ -250,4 +300,4 @@ if (false) {
 
 /***/ })
 
-},[27]);
+},[26]);

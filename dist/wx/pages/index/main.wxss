@@ -5,6 +5,10 @@
 ._div.data-v-6bff7160 .split {
   margin-bottom: 10pt;
 }
+._div.data-v-6bff7160 .swiper {
+  margin-left: 10pt;
+  margin-right: 10pt;
+}
 .card {
   padding: 20rpx;
 }

@@ -20,7 +20,7 @@
   </i-grid>
   <i-panel title="热门资源">
     <view>
-      <i-card @click="goType(item.type)" i-class="split" v-for="item in recommand" :key="item" :extra="item.name" :thumb="item.img">
+      <i-card @click="goType(item.type)" i-class="split" v-for="item in data" :key="item" :extra="item.name" :thumb="item.img">
           <view slot="content">简介{{item.remark}}</view>
           <view slot="footer">链接{{item.link}}</view>
       </i-card>
@@ -31,7 +31,6 @@
 
 <script>
 import card from '@/components/card'
-import top from '@/data/top.json'
 
 export default {
   data () {
@@ -41,6 +40,7 @@ export default {
         'https://puui.qpic.cn/vcover_vt_pic/0/tmyhttuwxw9ifza1556087236/260',
         'https://puui.qpic.cn/vcover_vt_pic/0/zmfj41ian3z6rbl1543634205/260'
       ],
+      top: [],
       indicatorDots: true,
       autoplay: true,
       interval: 5000,
@@ -49,8 +49,7 @@ export default {
         {type: '美剧', 'url': '../list/main?type=1'},
         {type: '英剧', 'url': '../list/main?type=2'},
         {type: '日剧', 'url': '../list/main?type=3'}
-      ],
-      recommand: top
+      ]
     }
   },
 
@@ -69,7 +68,13 @@ export default {
   },
 
   created () {
-    // let app = getApp()
+    const db = wx.cloud.database({env: 'data-1'})
+    db.collection('top').get().then(
+      res => {
+        console.log(res.data)
+        this.top = res.data
+      }
+    )
   }
 }
 </script>

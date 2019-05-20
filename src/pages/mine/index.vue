@@ -17,7 +17,7 @@
 </template>
 
 <script>
-const{ $Toast } = require('../../../static/dist/base/index');
+const { $Toast } = require('../../../static/dist/base/index')
 export default {
 
   data () {
@@ -43,22 +43,22 @@ export default {
         let event = {
           name: this.name,
           score: this.score,
-          link: this.link,
-
+          link: this.link
         }
-        wx.cloud.callFunctiopn({ name:'new_video',data:event }).then(
+        wx.cloud.callFunctiopn({ name: 'new_video', data: event }).then(
           res => {
-            console.log(res)}
+            console.log(res)
+          }
         )
-          $Toast({
-            content:'数据已提交',
-            type:'success'
-          });
+        $Toast({
+          content: '数据已提交',
+          type: 'success'
+        })
       } else {
         $Toast({
-            content:'数据不完整',
-            type:'warning'
-          });
+          content: '数据不完整',
+          type: 'warning'
+        })
       }
     }
   },

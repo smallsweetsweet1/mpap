@@ -26,19 +26,6 @@
       "iconPath": "static/tabs/mineb.png",
       "selectedIconPath": "static/tabs/mine.png"
     }],
-
-    "items": [{
-      "name": "首页",
-      "pagePath": "pages/index/main",
-      "icon": "static/tabs/homeb.png",
-      "activeIcon": "static/tabs/home.png"
-    },{
-      "name": "我的",
-      "pagePath": "pages/mine/main",
-      "icon": "static/tabs/mineb.png",
-      "activeIcon": "static/tabs/mine.png"
-    }],
-    "position": "bottom",
-    "cloud": true
+    "position": "bottom"
   }
 }
