@@ -5,7 +5,7 @@
       :autoplay="autoplay"
       :interval="interval"
       :duration="duration"
-      style="height: 560rpx"
+      style="height: 550rpx"
     >
     <block v-for="item in imgUrls" :key="item">
       <swiper-item>
@@ -20,9 +20,8 @@
   </i-grid>
   <i-panel title="热门资源">
     <view>
-      <i-card @click="goType(item.type)" i-class="split" v-for="item in data" :key="item" :extra="item.name" :thumb="item.img">
-          <view slot="content">简介{{item.remark}}</view>
-          <view slot="footer">链接{{item.link}}</view>
+      <i-card @click="goType(item.type)" i-class="split" v-for="item in top" :key="item" :extra="item.name" :thumb="item.img">
+          <view slot="footer">链接:{{item.link}}</view>
       </i-card>
     </view>
   </i-panel>
@@ -35,12 +34,12 @@ import card from '@/components/card'
 export default {
   data () {
     return {
+      top: [],
       imgUrls: [
         'https://puui.qpic.cn/vcover_vt_pic/0/nilk5fd4bkqdk3a1557023984/350',
         'https://puui.qpic.cn/vcover_vt_pic/0/tmyhttuwxw9ifza1556087236/260',
         'https://puui.qpic.cn/vcover_vt_pic/0/zmfj41ian3z6rbl1543634205/260'
       ],
-      top: [],
       indicatorDots: true,
       autoplay: true,
       interval: 5000,
@@ -69,7 +68,7 @@ export default {
 
   created () {
     const db = wx.cloud.database({env: 'data-1'})
-    db.collection('top').get().then(
+    db.collection('data').get().then(
       res => {
         console.log(res.data)
         this.top = res.data

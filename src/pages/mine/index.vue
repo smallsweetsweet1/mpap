@@ -8,7 +8,7 @@
     </view>
     <i-panel title="分享视频">
       <i-input :value="name" @change="changeName($event)" title="名称" autofocus placeholder="请输入视频名称" maxlength="20" />
-      <i-input :value="score" @change="changeScore($event)" title="视频评价" placeholder="评分：" maxlength="5" />
+      <i-input :value="score" @change="changeImg($event)" title="视频图片" placeholder="图片：" maxlength="20"/>
       <i-input :value="link" @change="changeLink($event)" title="视频链接" placeholder="链接：" maxlength="200" />
     </i-panel>
     <i-button @click="handleClick" type="warning" size="default">分享</i-button>
@@ -18,13 +18,13 @@
 
 <script>
 const { $Toast } = require('../../../static/dist/base/index')
-export default {
 
+export default {
   data () {
     return {
       name: '',
-      link: '',
-      score: ''
+      img: '',
+      link: ''
     }
   },
 
@@ -32,20 +32,20 @@ export default {
     changeName (event) {
       this.name = event.mp.detail.detail.value
     },
-    changeScore (event) {
-      this.score = event.mp.detail.detail.value
+    changeImg (event) {
+      this.img = event.mp.detail.detail.value
     },
     changeLink (event) {
       this.link = event.mp.detail.detail.value
     },
     handleClick () {
-      if (this.name && this.score && this.link) {
+      if (this.name && this.img && this.link) {
         let event = {
           name: this.name,
-          score: this.score,
+          img: this.img,
           link: this.link
         }
-        wx.cloud.callFunctiopn({ name: 'new_video', data: event }).then(
+        wx.cloud.callFunction({ name: 'new_video', data: event }).then(
           res => {
             console.log(res)
           }

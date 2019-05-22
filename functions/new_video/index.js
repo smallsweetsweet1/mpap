@@ -6,8 +6,8 @@ const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
-
-  await db.collection('top').add({
+  
+  await db.collection('data').add({
     data: event
   })
   .then(res =>{

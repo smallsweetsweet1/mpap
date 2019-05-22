@@ -8,15 +8,14 @@ global.webpackJsonpMpvue([1],[
 /* 4 */,
 /* 5 */,
 /* 6 */,
-/* 7 */,
-/* 8 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(8);
 
 
 
@@ -31,7 +30,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MOD
 app.$mount();
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40,7 +39,7 @@ app.$mount();
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(10)
+  __webpack_require__(9)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -84,18 +83,18 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 10 */,
 /* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_card__ = __webpack_require__(12);
-//
 //
 //
 //
@@ -132,8 +131,8 @@ if (false) {(function () {
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
-      imgUrls: ['https://puui.qpic.cn/vcover_vt_pic/0/nilk5fd4bkqdk3a1557023984/350', 'https://puui.qpic.cn/vcover_vt_pic/0/tmyhttuwxw9ifza1556087236/260', 'https://puui.qpic.cn/vcover_vt_pic/0/zmfj41ian3z6rbl1543634205/260'],
       top: [],
+      imgUrls: ['https://puui.qpic.cn/vcover_vt_pic/0/nilk5fd4bkqdk3a1557023984/350', 'https://puui.qpic.cn/vcover_vt_pic/0/tmyhttuwxw9ifza1556087236/260', 'https://puui.qpic.cn/vcover_vt_pic/0/zmfj41ian3z6rbl1543634205/260'],
       indicatorDots: true,
       autoplay: true,
       interval: 5000,
@@ -161,7 +160,7 @@ if (false) {(function () {
     var _this = this;
 
     var db = wx.cloud.database({ env: 'data-1' });
-    db.collection('top').get().then(function (res) {
+    db.collection('data').get().then(function (res) {
       console.log(res.data);
       _this.top = res.data;
     });
@@ -274,7 +273,7 @@ if (false) {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('swiper', {
     staticStyle: {
-      "height": "560rpx"
+      "height": "550rpx"
     },
     attrs: {
       "indicator-dots": _vm.indicatorDots,
@@ -326,7 +325,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "title": "热门资源",
       "mpcomid": '5'
     }
-  }, [_c('view', _vm._l((_vm.data), function(item, index) {
+  }, [_c('view', _vm._l((_vm.top), function(item, index) {
     return _c('i-card', {
       key: item,
       attrs: {
@@ -342,10 +341,8 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         }
       }
     }, [_c('view', {
-      slot: "content"
-    }, [_vm._v("简介" + _vm._s(item.remark))]), _vm._v(" "), _c('view', {
       slot: "footer"
-    }, [_vm._v("链接" + _vm._s(item.link))])])
+    }, [_vm._v("链接:" + _vm._s(item.link))])])
   }))])], 1)
 }
 var staticRenderFns = []
@@ -360,4 +357,4 @@ if (false) {
 }
 
 /***/ })
-],[8]);
+],[7]);

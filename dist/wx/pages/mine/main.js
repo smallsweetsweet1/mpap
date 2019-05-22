@@ -29,8 +29,8 @@ app.$mount();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_3fb4bd2a_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_3fb4bd2a_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(31);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -86,7 +86,7 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 30:
+/***/ 29:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109,15 +109,15 @@ if (false) {(function () {
 //
 //
 
-var _require = __webpack_require__(31),
+var _require = __webpack_require__(30),
     $Toast = _require.$Toast;
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
       name: '',
-      link: '',
-      score: ''
+      img: '',
+      link: ''
     };
   },
 
@@ -126,20 +126,20 @@ var _require = __webpack_require__(31),
     changeName: function changeName(event) {
       this.name = event.mp.detail.detail.value;
     },
-    changeScore: function changeScore(event) {
-      this.score = event.mp.detail.detail.value;
+    changeImg: function changeImg(event) {
+      this.img = event.mp.detail.detail.value;
     },
     changeLink: function changeLink(event) {
       this.link = event.mp.detail.detail.value;
     },
     handleClick: function handleClick() {
-      if (this.name && this.score && this.link) {
+      if (this.name && this.img && this.link) {
         var event = {
           name: this.name,
-          score: this.score,
+          img: this.img,
           link: this.link
         };
-        wx.cloud.callFunctiopn({ name: 'new_video', data: event }).then(function (res) {
+        wx.cloud.callFunction({ name: 'new_video', data: event }).then(function (res) {
           console.log(res);
         });
         $Toast({
@@ -160,7 +160,7 @@ var _require = __webpack_require__(31),
 
 /***/ }),
 
-/***/ 31:
+/***/ 30:
 /***/ (function(module, exports) {
 
 function getCtx (selector) {
@@ -203,7 +203,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 32:
+/***/ 31:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -245,15 +245,15 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }), _vm._v(" "), _c('i-input', {
     attrs: {
       "value": _vm.score,
-      "title": "视频评价",
-      "placeholder": "评分：",
-      "maxlength": "5",
+      "title": "视频图片",
+      "placeholder": "图片：",
+      "maxlength": "20",
       "eventid": '1',
       "mpcomid": '3'
     },
     on: {
       "change": function($event) {
-        _vm.changeScore($event)
+        _vm.changeImg($event)
       }
     }
   }), _vm._v(" "), _c('i-input', {

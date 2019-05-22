@@ -8,7 +8,7 @@
     </view>
     <i-panel title="分享视频" class="_i-panel data-v-3fb4bd2a">
       <i-input value="{{name}}" bindchange="handleProxy" title="名称" autofocus placeholder="请输入视频名称" maxlength="20" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-input data-v-3fb4bd2a"></i-input>
-      <i-input value="{{score}}" bindchange="handleProxy" title="视频评价" placeholder="评分：" maxlength="5" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_i-input data-v-3fb4bd2a"></i-input>
+      <i-input value="{{score}}" bindchange="handleProxy" title="视频图片" placeholder="图片：" maxlength="20" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_i-input data-v-3fb4bd2a"></i-input>
       <i-input value="{{link}}" bindchange="handleProxy" title="视频链接" placeholder="链接：" maxlength="200" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_i-input data-v-3fb4bd2a"></i-input>
     </i-panel>
     <i-button bindtap="handleProxy" type="warning" size="default" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_i-button data-v-3fb4bd2a">分享</i-button>
