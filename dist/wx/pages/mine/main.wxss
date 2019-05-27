@@ -1,5 +1,5 @@
 
-.userinfo.data-v-3fb4bd2a {
+.userinfo.data-v-42564a6a {
   position: relative;
   width: 750rpx;
   height: 320rpx;
@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
 }
-.userinfo-avatar.data-v-3fb4bd2a {
+.userinfo-avatar.data-v-42564a6a {
   overflow: hidden;
   display: block;
   width: 160rpx;
@@ -19,7 +19,7 @@
   border: 4rpx solid #fff;
   box-shadow: 6rpx 6rpx 20rpx rgba(0, 0, 0, 0.2);
 }
-.tips.data-v-3fb4bd2a {
+.tips.data-v-42564a6a {
   padding: 20pt;
   font-size: 10pt;
   color: darkorange;

@@ -1,21 +1,21 @@
-<template name="de54ed00">
-  <view class="_div data-v-6bff7160">
-    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: 550rpx" class="_swiper data-v-6bff7160">
+<template name="703b4550">
+  <view class="_div data-v-bd8f8c20">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: 550rpx" class="_swiper data-v-bd8f8c20">
       <block wx:key="item" key="{{item}}" wx:for="{{imgUrls}}" wx:for-index="index" wx:for-item="item">
-        <swiper-item class="_swiper-item data-v-6bff7160">
-          <image src="{{item}}" style="width:100%;hight:100%" class="_image data-v-6bff7160"></image>
+        <swiper-item class="_swiper-item data-v-bd8f8c20">
+          <image src="{{item}}" style="width:100%;hight:100%" class="_image data-v-bd8f8c20"></image>
         </swiper-item>
       </block>
     </swiper>
-    <i-grid i-class="border" class="_i-grid data-v-6bff7160">
-      <i-grid-item bindtap="handleProxy" i-class="border" wx:key="item" key="{{item}}" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{grids}}" wx:for-index="index" wx:for-item="item" class="_i-grid-item data-v-6bff7160">
-        <i-grid-label class="_i-grid-label data-v-6bff7160">{{item.type}}</i-grid-label>
+    <i-grid i-class="border" class="_i-grid data-v-bd8f8c20">
+      <i-grid-item bindtap="handleProxy" i-class="border" wx:key="item" key="{{item}}" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{grids}}" wx:for-index="index" wx:for-item="item" class="_i-grid-item data-v-bd8f8c20">
+        <i-grid-label class="_i-grid-label data-v-bd8f8c20">{{item.type}}</i-grid-label>
       </i-grid-item>
     </i-grid>
-    <i-panel title="热门资源" class="_i-panel data-v-6bff7160">
-      <view class="_view data-v-6bff7160">
-        <i-card bindtap="handleProxy" i-class="split" wx:key="item" key="{{item}}" extra="{{item.name}}" thumb="{{item.img}}" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{top}}" wx:for-index="index" wx:for-item="item" class="_i-card data-v-6bff7160">
-          <view slot="footer" class="_view data-v-6bff7160">链接:{{item.link}}</view>
+    <i-panel title="热门资源" class="_i-panel data-v-bd8f8c20">
+      <view class="_view data-v-bd8f8c20">
+        <i-card bindtap="handleProxy" i-class="split" wx:key="item" key="{{item}}" extra="{{item.name}}" thumb="{{item.img}}" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{top}}" wx:for-index="index" wx:for-item="item" class="_i-card data-v-bd8f8c20">
+          <view slot="footer" class="_view data-v-bd8f8c20">评价:{{item.evalu}}</view>
         </i-card>
       </view>
     </i-panel>

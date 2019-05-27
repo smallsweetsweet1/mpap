@@ -1,6 +1,6 @@
-<template name="93e60134">
-  <view class="_div data-v-a4127ba2">
-    <view class="_p data-v-a4127ba2 card">
+<template name="456ce93e">
+  <view class="_div data-v-29cadccf">
+    <view class="_p data-v-29cadccf card">
       {{text}}
     </view>
   </view>

@@ -1,17 +1,17 @@
-<template name="b32e8efe">
-  <view class="_div data-v-3fb4bd2a">
-    <view class="_view data-v-3fb4bd2a userinfo">
-      <view class="_view data-v-3fb4bd2a userinfo-avatar">
-        <open-data type="userAvatarUrl" class="_open-data data-v-3fb4bd2a"></open-data>
+<template name="030609a9">
+  <view class="_div data-v-42564a6a">
+    <view class="_view data-v-42564a6a userinfo">
+      <view class="_view data-v-42564a6a userinfo-avatar">
+        <open-data type="userAvatarUrl" class="_open-data data-v-42564a6a"></open-data>
       </view>
-      <open-data type="userNickName" class="_open-data data-v-3fb4bd2a"></open-data>
+      <open-data type="userNickName" class="_open-data data-v-42564a6a"></open-data>
     </view>
-    <i-panel title="分享视频" class="_i-panel data-v-3fb4bd2a">
-      <i-input value="{{name}}" bindchange="handleProxy" title="名称" autofocus placeholder="请输入视频名称" maxlength="20" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-input data-v-3fb4bd2a"></i-input>
-      <i-input value="{{score}}" bindchange="handleProxy" title="视频图片" placeholder="图片：" maxlength="20" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_i-input data-v-3fb4bd2a"></i-input>
-      <i-input value="{{link}}" bindchange="handleProxy" title="视频链接" placeholder="链接：" maxlength="200" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_i-input data-v-3fb4bd2a"></i-input>
+    <i-panel title="分享视频" class="_i-panel data-v-42564a6a">
+      <i-input value="{{name}}" bindchange="handleProxy" title="名称" autofocus placeholder="请输入视频名称" maxlength="20" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-input data-v-42564a6a"></i-input>
+      <i-input value="{{score}}" bindchange="handleProxy" title="视频图片" placeholder="图片：" maxlength="20" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_i-input data-v-42564a6a"></i-input>
+      <i-input value="{{evalu}}" bindchange="handleProxy" title="视频评价" placeholder="评价：" maxlength="200" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_i-input data-v-42564a6a"></i-input>
     </i-panel>
-    <i-button bindtap="handleProxy" type="warning" size="default" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_i-button data-v-3fb4bd2a">分享</i-button>
-    <i-toast id="toast" class="_i-toast data-v-3fb4bd2a"></i-toast>
+    <i-button bindtap="handleProxy" type="warning" size="default" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_i-button data-v-42564a6a">分享</i-button>
+    <i-toast id="toast" class="_i-toast data-v-42564a6a"></i-toast>
   </view>
 </template>

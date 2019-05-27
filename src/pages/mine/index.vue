@@ -9,7 +9,7 @@
     <i-panel title="分享视频">
       <i-input :value="name" @change="changeName($event)" title="名称" autofocus placeholder="请输入视频名称" maxlength="20" />
       <i-input :value="score" @change="changeImg($event)" title="视频图片" placeholder="图片：" maxlength="20"/>
-      <i-input :value="link" @change="changeLink($event)" title="视频链接" placeholder="链接：" maxlength="200" />
+      <i-input :value="evalu" @change="changeevalu($event)" title="视频评价" placeholder="评价：" maxlength="200" />
     </i-panel>
     <i-button @click="handleClick" type="warning" size="default">分享</i-button>
     <i-toast id="toast"/>
@@ -24,7 +24,7 @@ export default {
     return {
       name: '',
       img: '',
-      link: ''
+      evalu: ''
     }
   },
 
@@ -35,15 +35,15 @@ export default {
     changeImg (event) {
       this.img = event.mp.detail.detail.value
     },
-    changeLink (event) {
-      this.link = event.mp.detail.detail.value
+    changeevalu (event) {
+      this.evalu = event.mp.detail.detail.value
     },
     handleClick () {
-      if (this.name && this.img && this.link) {
+      if (this.name && this.img && this.evalu) {
         let event = {
           name: this.name,
           img: this.img,
-          link: this.link
+          evalu: this.evalu
         }
         wx.cloud.callFunction({ name: 'new_video', data: event }).then(
           res => {

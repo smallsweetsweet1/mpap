@@ -4,7 +4,7 @@
       <view>
         <i-card i-class="split" v-for="item in recommand" :key="item" :extra="item.name" :thumb="item.img">
             <view slot="content">评分{{item.score}}</view>
-            <view slot="footer">链接{{item.link}}</view>
+            <view slot="footer">评价{{item.evalu}}</view>
         </i-card>
       </view>
     </i-panel>
@@ -23,12 +23,20 @@ export default {
 
   onLoad (option) {
     console.log(option.type)
-    this.recommand = require('@/data/' + option.type + '.json')
   },
 
   created () {
-  }
 }
+
+methods: {
+        wx.cloud.callFunction({ name: 'get', data: event }).then(
+          res => {
+            console.log(res)
+          }
+        )
+
+  },
+
 </script>
 
 <style scoped>

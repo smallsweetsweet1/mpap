@@ -21,7 +21,7 @@
   <i-panel title="热门资源">
     <view>
       <i-card @click="goType(item.type)" i-class="split" v-for="item in top" :key="item" :extra="item.name" :thumb="item.img">
-          <view slot="footer">链接:{{item.link}}</view>
+          <view slot="footer">评价:{{item.evalu}}</view>
       </i-card>
     </view>
   </i-panel>
