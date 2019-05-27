@@ -26,16 +26,12 @@ export default {
   },
 
   created () {
-}
-
-methods: {
-        wx.cloud.callFunction({ name: 'get', data: event }).then(
+    wx.cloud.callFunction({ name: 'get', data: event }).then(
           res => {
             console.log(res)
-          }
-        )
-
-  },
+}
+},
+}
 
 </script>
 
