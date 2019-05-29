@@ -23,16 +23,21 @@ export default {
 
   onLoad (option) {
     console.log(option.type)
+    this.o = option.type
   },
 
   created () {
-    wx.cloud.callFunction({ name: 'get', data: event }).then(
-          res => {
-            console.log(res)
+    const db = wx.cloud.database({env: 'data-1'})
+    db.collection('data').where({
+      kind: o
+    })
+      .get().then((res) => {
+        console.log(res.data)
+        this.top = res.data
+      }
+      )
+  }
 }
-},
-}
-
 </script>
 
 <style scoped>
