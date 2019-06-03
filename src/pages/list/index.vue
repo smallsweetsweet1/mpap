@@ -21,15 +21,17 @@ export default {
     }
   },
 
-  onLoad (option) {
+  onLoad: function (option) {
+    this.setData({
+      type: option.type
+    })
     console.log(option.type)
-    this.o = option.type
   },
 
   created () {
     const db = wx.cloud.database({env: 'data-1'})
     db.collection('data').where({
-      kind: o
+      kind: this.setData
     })
       .get().then((res) => {
         console.log(res.data)
