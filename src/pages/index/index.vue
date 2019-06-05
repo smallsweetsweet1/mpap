@@ -55,7 +55,6 @@ export default {
   components: {
     card
   },
-
   methods: {
     goList (url) {
       mpvue.navigateTo({ url })
@@ -63,6 +62,7 @@ export default {
     goType (type) {
       let url = '../list/main?type=' + type
       mpvue.navigateTo({ url })
+      this.type = type
     }
   },
 
