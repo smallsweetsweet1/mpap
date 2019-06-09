@@ -20,7 +20,7 @@
   </i-grid>
   <i-panel title="热门资源">
     <view>
-      <i-card @click="goType(item.type)" i-class="split" v-for="item in top" :key="item" :extra="item.name" :thumb="item.img">
+      <i-card i-class="split" v-for="item in top" :key="item" :extra="item.name" :thumb="item.img">
           <view slot="footer">评价:{{item.evalu}}</view>
       </i-card>
     </view>

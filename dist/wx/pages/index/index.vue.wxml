@@ -14,7 +14,7 @@
     </i-grid>
     <i-panel title="热门资源" class="_i-panel data-v-bd8f8c20">
       <view class="_view data-v-bd8f8c20">
-        <i-card bindtap="handleProxy" i-class="split" wx:key="item" key="{{item}}" extra="{{item.name}}" thumb="{{item.img}}" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" wx:for="{{top}}" wx:for-index="index" wx:for-item="item" class="_i-card data-v-bd8f8c20">
+        <i-card i-class="split" wx:key="item" key="{{item}}" extra="{{item.name}}" thumb="{{item.img}}" wx:for="{{top}}" wx:for-index="index" wx:for-item="item" class="_i-card data-v-bd8f8c20">
           <view slot="footer" class="_view data-v-bd8f8c20">评价:{{item.evalu}}</view>
         </i-card>
       </view>

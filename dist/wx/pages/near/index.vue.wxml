@@ -1,3 +1,0 @@
-<template name="472222b2">
-  <view class="_div data-v-338eff00"><map id="map" longitude="114.347997" latitude="30.571331" scale="14" controls="{{controls}}" bindcontroltap="handleProxy" markers="{{markers}}" bindmarkertap="handleProxy" polyline="{{polyline}}" bindregionchange="handleProxy" show-location style="width: 100%; height: 100%;" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_map data-v-338eff00"></map></view>
-</template>

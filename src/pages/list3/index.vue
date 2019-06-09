@@ -24,7 +24,6 @@ export default {
   created () {
     const db = wx.cloud.database({env: 'data-1'})
     db.collection('data3').where({
-      'kind': this.type
     })
       .get().then((res) => {
         console.log(res.data)

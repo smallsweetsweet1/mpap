@@ -153,9 +153,7 @@ var _require = __webpack_require__(36),
         });
       }
     }
-  },
-
-  created: function created() {}
+  }
 });
 
 /***/ }),

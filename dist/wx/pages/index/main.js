@@ -327,13 +327,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         "i-class": "split",
         "extra": item.name,
         "thumb": item.img,
-        "eventid": '1_' + index,
         "mpcomid": '4_' + index
-      },
-      on: {
-        "click": function($event) {
-          _vm.goType(item.type)
-        }
       }
     }, [_c('view', {
       slot: "footer"
