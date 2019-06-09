@@ -21,19 +21,14 @@ export default {
     }
   },
 
-  onLoad (option) {
-    console.log(option.type)
-    this.type = option.type
-  },
-
   created () {
     const db = wx.cloud.database({env: 'data-1'})
-    db.collection('data').where({
-      kind: this.type
+    db.collection('data3').where({
+      'kind': this.type
     })
       .get().then((res) => {
         console.log(res.data)
-        this.top = res.data
+        this.recommand = res.data
       }
       )
   }

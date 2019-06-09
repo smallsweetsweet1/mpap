@@ -137,7 +137,7 @@ if (false) {(function () {
       autoplay: true,
       interval: 5000,
       duration: 1000,
-      grids: [{ type: '美剧', 'url': '../list/main?type=1' }, { type: '英剧', 'url': '../list/main?type=2' }, { type: '日剧', 'url': '../list/main?type=3' }]
+      grids: [{ type: '美剧', 'url': '../list1/main' }, { type: '英剧', 'url': '../list2/main' }, { type: '日剧', 'url': '../list3/main' }]
     };
   },
 
@@ -148,11 +148,6 @@ if (false) {(function () {
   methods: {
     goList: function goList(url) {
       global.mpvue.navigateTo({ url: url });
-    },
-    goType: function goType(type) {
-      var url = '../list/main?type=' + type;
-      global.mpvue.navigateTo({ url: url });
-      this.type = type;
     }
   },
 

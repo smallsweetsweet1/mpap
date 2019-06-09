@@ -1,4 +1,4 @@
-<template name="703b4550">
+<template name="384e1df7">
   <view class="_div data-v-bd8f8c20">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: 550rpx" class="_swiper data-v-bd8f8c20">
       <block wx:key="item" key="{{item}}" wx:for="{{imgUrls}}" wx:for-index="index" wx:for-item="item">
